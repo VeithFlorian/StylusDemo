@@ -1,0 +1,36 @@
+default-font = 'Comic Sans MS'
+
+font(prop, arg)
+  font-{ prop } arg
+
+border-radius()
+  -webkit-border-radius arguments
+  -moz-border-radius arguments
+  border-radius arguments
+
+p
+button
+  font('family', default-font)
+
+.text
+  font('size', 32px)
+
+button
+  color red
+  border-radius 5px
+  font('size', invoke(2, 3, add))
+  &:hover
+    color blue
+
+add(a, b)
+  a + b
+
+sub(a, b)
+  a - b
+
+invoke(a, b, fn)
+  fn(a, b)
+
+for i in (1..3)
+  h{i}
+    color deeppink
